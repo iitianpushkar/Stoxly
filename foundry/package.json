@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "simulate": "bash -c 'source .env && node ./functions/simulators/alpacaPriceSimulator.js'",
+    "upload": "bash -c 'source .env && node ./functions/uploadSecrets.js'"
+  },
+  "dependencies": {
+    "@chainlink/functions-toolkit": "^0.2.8"
+  }
+}
