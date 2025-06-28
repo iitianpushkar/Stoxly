@@ -42,7 +42,7 @@ export const StockUsdExc: Provider = {
         prompt,
       });
 
-      console.log('Model response:', response);
+    //  console.log('Model response:', response);
 
       const parsed = parseKeyValueXml(response);
 
@@ -51,7 +51,7 @@ export const StockUsdExc: Provider = {
       }
 
       const stockSym = parsed.stockSym.toUpperCase();
-      console.log("stock symbol", stockSym);
+    //  console.log("stock symbol", stockSym);
 
       const twelveDataApiKey = '089648fd0b744f69a39eb0052834ff3b';
       const stockPriceRequest = await fetch(

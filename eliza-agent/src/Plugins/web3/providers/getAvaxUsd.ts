@@ -68,7 +68,7 @@ export const AvaxUsdExc:Provider={
           ]
 
         const exchangeRate = await publicClient.readContract({
-            address: '0xFbF1aeC18Fb3B8CCa16Bb7369723375fe7925E88',
+            address: '0xAcbF2d367407B0cd5E9a70420750C29992C3dB25',
             abi: abi,
             functionName: 'getCollateralRatioAdjustedTotalBalance',
             args: [1], 

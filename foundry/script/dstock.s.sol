@@ -9,7 +9,7 @@ contract Deploy is Script {
         string constant mintSourceCode = "./functions/sources/alpacaMintPrice.js";
         string constant redeemSourceCode = "./functions/sources/alpacaRedeemPrice.js";
         uint64 subId = 15619;
-        uint64 secretVersion = 1750699286;
+        uint64 secretVersion = 1751022661;
         uint8 secretSlot = 0; 
         
        function run() external {

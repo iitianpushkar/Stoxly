@@ -97,7 +97,7 @@ export const sendMintRequestAction: Action = {
       }
 
       // Step 2: Define contract
-      const contractAddress = '0xFbF1aeC18Fb3B8CCa16Bb7369723375fe7925E88';
+      const contractAddress = '0xAcbF2d367407B0cd5E9a70420750C29992C3dB25';
       const abi = [
         {
           "name": "sendMintRequest",
@@ -153,7 +153,7 @@ export const sendMintRequestAction: Action = {
 
 
 
-      const resultText = `Sent sendMintRequest for ${stock} x${numOfStocks}. Transaction hash: ${txHash}`;
+      const resultText = `Sent mint request for ${stock} x${numOfStocks}. Transaction hash: ${txHash}`;
 
       if (callback) {
         callback({

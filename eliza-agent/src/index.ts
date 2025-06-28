@@ -33,7 +33,7 @@ export const character: Character = {
     secrets: {},
     chains:{
       evm:[
-        process.env.EVM_CHAINS
+        'avalancheFuji','sepolia'
       ]
     }
   },

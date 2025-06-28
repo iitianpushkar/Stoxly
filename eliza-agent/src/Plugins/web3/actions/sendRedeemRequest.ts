@@ -95,18 +95,33 @@ import {
         }
   
         // Step 2: Define contract
-        const contractAddress = '0xFbF1aeC18Fb3B8CCa16Bb7369723375fe7925E88';
+        const contractAddress = '0xAcbF2d367407B0cd5E9a70420750C29992C3dB25';
         const abi = [ 
-            {
-                "name": "sendRedeemRequest",
-                "type": "function",
-                "inputs": [
-                  { "name": "numOfStocks", "type": "uint256" },
-                  { "name": "stock", "type": "string" }
-                ],
-                "outputs": [{ "type": "bytes32" }],
-                "stateMutability": "nonpayable"
-              }                      
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "numOfStocks",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "stock",
+                "type": "string"
+              }
+            ],
+            "name": "sendRedeemRequest",
+            "outputs": [
+              {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+              }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          }
+                                
         ];
   
         // Step 3: Define args — these can be parsed from memory/state if you like
@@ -148,7 +163,7 @@ import {
   
   
   
-        const resultText = `Sent sendRedeemRequest for ${stock} x${numOfStocks}. Transaction hash: ${txHash}`;
+        const resultText = `Sent redeemRequest for ${stock} x${numOfStocks}. Transaction hash: ${txHash}`;
   
         if (callback) {
           callback({

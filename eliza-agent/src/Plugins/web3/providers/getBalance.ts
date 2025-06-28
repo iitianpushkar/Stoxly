@@ -36,8 +36,13 @@ export const getBalance:Provider={
         elizaLogger.info(`Wallet address: ${address}`);
 
         const chains = walletProvider.chains;
+     //   console.log('Available chains:', Object.keys(chains));
+        const balances=[];
 
-        const publicClient = walletProvider.getPublicClient(Object.keys(chains)[0] as SupportedChain);
+        for( const chainName in chains) {
+
+        const publicClient = walletProvider.getPublicClient(chainName as SupportedChain);
+      //  console.log('Public client for chain:', publicClient);
         if (!publicClient) {
           elizaLogger.error('Public client not found for the chain');
           return {
@@ -48,16 +53,18 @@ export const getBalance:Provider={
         }
 
         const balance = await publicClient.getBalance({address:address});
+       // elizaLogger.info(`Balance for ${chainName}: ${balance}`);
+        balances.push({chain: chainName, balance: balance});
 
+        }
         const agentName = state?.agentName || 'The agent'
         return {
-            text: `${agentName} has ${formatEther(balance)} AVAX.`,
+            text: `${agentName} has the following balances: ${balances.map(b => `${b.chain}: ${formatEther(b.balance)}`).join(', ')}`,
             values: {
             },
             data: {
                 address: address,
-                balance: formatEther(balance),
-                chain: Object.keys(chains)[0],
+                chains: Object.keys(walletProvider.chains),
             },
           };
     }

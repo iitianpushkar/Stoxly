@@ -61,7 +61,7 @@ export const stockHoldings: Provider = {
       }
     ];
 
-    const contractAddress = '0xFbF1aeC18Fb3B8CCa16Bb7369723375fe7925E88';
+    const contractAddress = '0xAcbF2d367407B0cd5E9a70420750C29992C3dB25';
 
     try {
       const rawHoldings = await publicClient.readContract({
