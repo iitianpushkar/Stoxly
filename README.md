@@ -22,11 +22,14 @@ An AI agent powered by **ElizaOS** serves as the user interface, allowing users 
 
 2. Agent calls the mint function of the `dstock` smart contract on Avalanche Fuji.
 
-3. On-chain logic via Chainlink Functions:
-   - Fetches real-time **stock price (e.g., AAPL)** in USD
-   - Fetches **AVAX/USD price** from Chainlink Price Feed
+3. Using Chainlink Functions:
+   - Fetches real-time **stock price (e.g., AAPL)** in USD using a custom javascript code
+   - Places an order to buy stock off-chain using the same javascript code (via Alpaca API)
 
-4. Contract logic:
+4. Chainlink Price feed
+   - Fetches **AVAX/USD price** from Chainlink Price Feed     
+
+5. Contract logic:
    ```solidity
    if (avax_in_usd >= stock_price_usd * quantity) {
        mint DSTOCK token(s)
@@ -40,11 +43,14 @@ An AI agent powered by **ElizaOS** serves as the user interface, allowing users 
 
 2. Agent calls the redeem function of the `dstock` smart contract.
 
-3. On-chain logic via Chainlink Functions:
-   - Fetches real-time stock price in USD
+3. Using Chainlink Functions:
+   - Fetches real-time stock price in USD using a custom javascript code
+   - Places an order to sell stock off-chain using the same javascript code (via Alpaca API)
+     
+4. Chainlink Price feed
    - Uses Chainlink Price Feed for AVAX/USD
-
-4. Contract logic:
+     
+5. Contract logic:
    ```solidity
    if (totalHoldings[requester][stock] >= quantity) {
     burn DSTOCK token(s)
