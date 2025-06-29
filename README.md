@@ -75,5 +75,5 @@ An AI agent powered by **ElizaOS** serves as the user interface, allowing users 
 
 ## 📹 Demo Video
 
-▶️ [Watch Demo]([https://youtu.be/K_3fF6cZhGM?si=oflS3frMChzmS5t8](https://youtu.be/jfRgW0D9VWc))
+▶️ [Watch Demo](https://youtu.be/jfRgW0D9VWc?si=jjtQZn3RlVs4nURp)
    
