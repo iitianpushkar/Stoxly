@@ -78,6 +78,9 @@ An AI agent powered by **ElizaOS** serves as the user interface, allowing users 
 
 ---
 
+## Chainlink Uses
+   Link to all files that use chainlink : [Click here](https://github.com/iitianpushkar/Stoxly/blob/main/Link_to_all_files_that_use_Chainlink.md)
+
 ## 📹 Demo Video
 
 ▶️ [Watch Demo](https://youtu.be/jfRgW0D9VWc?si=jjtQZn3RlVs4nURp)
