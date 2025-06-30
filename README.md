@@ -55,8 +55,7 @@ An AI agent powered by **ElizaOS** serves as the user interface, allowing users 
    if (totalHoldings[requester][stock] >= quantity) {
     burn DSTOCK token(s)
     update totalHoldings
-    send back equivalent AVAX
-   }  
+    send back  AVAX equivalent to stock_price_usd * quantity   }  
 
 ### 🌐 Cross-Chain Flow (Sepolia → Avalanche Fuji)
 1. User on a different chain (e.g., Sepolia) wants to mint/redeem a stock using USDC.
@@ -67,7 +66,7 @@ An AI agent powered by **ElizaOS** serves as the user interface, allowing users 
 
 4. Receiver Contract on Avalanche Fuji forwards data to the DSTOCK contract.
 
-5. DSTOCK contract completes mint/redeem operation as usual.
+5. dstock contract completes mint/redeem operation as usual.
 
 ## 📦 Deployments
 
