@@ -1,6 +1,0 @@
-1. [dstock.sol](foundry/src/dstock.sol)
-2. [ccipSender.sol](foundry/src/ccipSender.sol)
-3. [ccipReceiver.sol](foundry/src/ccipReceiver.sol)
-4. [uploadSecrets.js](foundry/functions/uploadSecrets.js)
-5. [alpacaMintPrice.js](foundry/functions/sources/alpacaMintPrice.js)
-6. [alpacaRedeemPrice.js](foundry/functions/sources/alpacaRedeemPrice.js)
